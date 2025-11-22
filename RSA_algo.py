@@ -17,7 +17,7 @@ def generate_keypair(p, q):
     while gcd(e, phi) != 1:
         e = random.randrange(1, phi)
     
-    # Built-in modular inverse: d = e⁻¹ mod phi
+    #  modular inverse: d = e⁻¹ mod phi
     d = pow(e, -1, phi)
     
     return ((e, n), (d, n))
@@ -43,7 +43,7 @@ if __name__ == '__main__':
     print(f"Public Key: {public}")
     print(f"Private Key: {private}")
     
-    message = "Hello WorlD!"
+    message = "BaNgladesH!"
     print(f"\nOriginal Message: {message}")
     
     encrypted_msg = encrypt(public, message)
